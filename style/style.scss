@@ -1,0 +1,182 @@
+$yellow: #f5b52f;
+$orange: #f05f2a;
+$blue: #144cdf;
+$darkBlue: #21368f;
+$black: #1D1D1D;
+
+body{
+    background-image: url("Background.svg");
+    background-size: cover;
+    background-color: $black;
+    background-position: center;
+    top: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color:white;
+    max-width: 100%;
+}
+p{
+    line-height: 1.6;
+}
+h1, h2, h3{
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1.1px;
+}
+h2{
+    color: $blue;
+}
+h3{
+    text-transform: uppercase;
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+    line-height: 1.6;
+}
+#lang{
+    padding-right: 30px;
+    padding-top: 15px;
+    text-align: right;
+    font-size:130%;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+a span{
+    display: inline;
+}
+a:hover span{
+    color: $yellow;
+}
+#intro{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+}
+.intro-wrap{
+    max-width: 500px;
+    font-size: 145%;
+    b{
+        color: $blue;
+    }
+}
+#section{
+    height: min-content;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 100px;
+}
+#sec-name{
+    justify-content: start;
+    width: 40%;
+    text-align: right; 
+    padding-right: 30px;
+}
+#sec-wrap{
+    margin-left: auto;
+    width: 60%;
+    padding-top: 8px;
+    padding-left: 5%;
+    padding-right: 20%;
+}
+.about b{
+    color: $yellow;
+}
+.skills-wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+.skill{
+    padding-right: 70px;
+}
+.project{
+    margin-top: 40px;
+    height: min-content;
+    border-top: solid 1px $yellow;
+    h3{
+        display: inline-block;
+        max-width: 80%;
+    }
+    a{
+        display: block;
+        float: right;
+        padding-top: 17px;
+        &:hover > .fa-external-link-alt{
+            cursor: pointer;
+            color: $blue;
+        }
+    }
+}
+#footer{
+    margin: 0;
+    height: 100px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.foot-left{
+    display: inline-flex;
+    width: 250px;
+    b{
+        color: $blue;
+    }
+}
+.foot-right{
+    display: inline-flex;
+    float: right;
+    padding-bottom: 20px;
+    ul{
+        display: flex;
+        flex-direction: row;
+        a{
+            padding-left: 20px;
+            display: block;
+            &:hover > .fa-envelope{
+                color: $blue;
+            }
+            &:hover > .fa-linkedin-in{
+                color: $blue;
+            }
+            &:hover > .fa-github{
+                color: $blue;
+            }
+            &:hover > .fa-behance{
+                color: $blue;
+            }
+            &:hover > .fa-facebook-f{
+                color: $blue;
+            }
+        }
+    }
+}
+
+@media (max-width: 800px){ 
+    #section{
+        flex-wrap: wrap;
+    }
+    #sec-name{
+        text-align: left;
+        padding-left: 10%; 
+        width: 100%;
+        height: 50px;
+    }
+    #sec-wrap{
+        padding: 0;
+        margin-left: 0;
+        width: 80%;
+    }
+    .project{
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px){
+    body{
+        background-position: right top;
+    }
+    .intro-wrap{
+        max-width: 280px;
+        font-size: 100%;
+    }
+}
